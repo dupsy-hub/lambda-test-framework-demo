@@ -19,7 +19,8 @@ mocks: tools
 unit:
 	# Run tests only for handlers and calculate coverage only on handlers
 	go test -race -covermode=atomic -coverpkg=$(COVERPKG) -coverprofile=$(COVERFILE) $(TEST_PKGS)
-	./scripts/coverage_check.sh 90 $(COVERFILE)
+	bash ./scripts/coverage_check.sh 90 $(COVERFILE)
+
 
 cover: unit
 	go tool cover -func=$(COVERFILE)
