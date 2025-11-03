@@ -8,7 +8,6 @@ It ensures **code quality**, **reliability**, and **automation** across all Lamb
 
 ## Framework Overview — How It Works
 
-```mermaid
 flowchart LR
     A[Lambda Handler Code] --> B[Dependency Interfaces (awsiface)]
     B --> C[Generated Mocks (mockgen)]
@@ -17,7 +16,6 @@ flowchart LR
     E --> F[CI Pipeline (GitHub Actions)]
     F --> G[Coverage Gate ≥90% ✅]
     G --> H[Confident, Tested, Deployable Lambda]
-```
 
 ## Repository Structure
 
